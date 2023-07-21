@@ -1,0 +1,58 @@
+$primary_color: #ffffff;
+$secondary_color: #006ac7;
+$sm_breakpoint: 768px;
+
+@mixin flexStyle($flex, $direction, $center) {
+  display: $flex;
+  flex-direction: $direction;
+  justify-content: $center;
+  align-items: $center;
+}
+
+@mixin buttonStyle {
+  background-color: $secondary_color;
+  color: $primary_color;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  transition: .5s ease-in-out;
+  height: 50px;
+  width: 150px;
+
+  &:hover {
+    border: 1px solid $secondary_color;
+    background: none;
+    color: $secondary_color;
+  }
+}
+
+
+.product_page {
+  @include flexStyle(flex, row, center);
+  padding: 1.5rem;
+
+  @media (width <=$sm_breakpoint) {
+    flex-direction: column;
+  }
+
+  &_img {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .button {
+    @include buttonStyle;
+  }
+}
+
+.bloc {
+  @include flexStyle(flex, column, center);
+  text-align: center;
+  height: 55vh;
+
+  &_link {
+    @include buttonStyle;
+  }
+}

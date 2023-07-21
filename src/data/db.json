@@ -1,0 +1,16 @@
+{
+    "product": {
+        "card": [
+            {"title": "Formation React", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "price": "19.99"}
+        ],
+        "addCart": "Ajouter au panier"
+    },
+    "success": {
+        "title": "Votre paiement a bien été pris en compte, merci pour votre achat.",
+        "cta": "Retour à la page produit"
+    },
+    "cancel": {
+        "title": "Votre paiement a échoué, Veuillez réessayer.",
+        "cta": "Réessayer"
+    }
+}
